@@ -10,7 +10,7 @@ include('includes/interfaz.php');
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Agregar Alumno</h1>
+            <h1 class="page-header">Agregar Ítem</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -26,90 +26,27 @@ include('includes/interfaz.php');
 
                             <div class="col-lg-6" >
                                 <div class="form-group">
-                                    <label for="">Numero de Matricula</label>
-                                    <input id="matricula" name="matricula" type="number" class="form-control" required>
+                                    <label for="">Nombre</label>
+                                    <input id="matricula" name="matricula" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Rut</label>
+                                    <label for="">Descripción</label>
                                     <input id="rut" name="rut" type="text" class="form-control" required >
                                 </div>
+                                
                                 <div class="form-group">
-                                    <label for="">Nombres</label>
-                                    <input id="nombres" name="nombres" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Apellidos</label>
-                                    <input id="apellidos" name="apellidos" type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Fecha nacimiento</label>
-                                    <input id="nacimiento" name="nacimiento" type="date" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="">Región</label>
-                                    <select class="seleccion form-control" name="cosa" onchange="cambia()">
-                                        <option value="0" selected="selected">Regiones</option>
-                                        <option value="1">Tarapaca</option>
-                                        <option value="2">Antofagasta</option>
-                                        <option value="3">Atacama</option>
-                                        <option value="4">Coquimbo</option>
-                                        <option value="5">Valparaiso</option>
-                                        <option value="6">O'Higgins</option>
-                                        <option value="7">Maule</option>
-                                        <option value="8">Bio - Bio</option>
-                                        <option value="9">Araucania</option>
-                                        <option value="10">Los Lagos</option>
-                                        <option value="11">Aisen</option>
-                                        <option value="12">Magallanes Y Antartica</option>
-                                        <option value="13">Metropolitana</option>
-                                        <option value="14">Los Rios</option>
-                                        <option value="15">Arica y Parinacota</option>
-                                    </select>
-                                </div>
-                                <div class="form-group"> 
-                                    <label for="">Comuna</label>
-                                    <select class="seleccion form-control" name="opt">
-                                        <option value="0">Comuna</option>
-                                    </select>
+                            <div class="form-group">
+                                    <label for="">Cantidad</label>
+                                    <input id="nombres" name="nombres" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Dirección</label>
-                                    <input id="direccion" name="direccion" type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Teléfono</label>
-                                    <input id="telefono" name="telefono" type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Genero</label>
-                                    <select id="sexo" name="sexo" class="form-control" required>
-                                        <option selected>Seleccionar...</option>
-                                        <option value="1">Masculino</option>
-                                        <option value="2">Femenino</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Curso</label>
-                                        <select name="curso" id="curso" class="form-control" required>
-                                            <option value="" selected disabled hidden> Seleccione </option>
-                                            <?php
-
-                                            $sql = "SELECT * FROM curso";
-                                            $resultado = mysqli_query($enlace, $sql);
-                                            while ($dado = mysqli_fetch_array($resultado)):    
-                                                $nombre = $dado['nombre_curso']; 
-                                                $id_curso = $dado['id'];                                           
-
-                                            ?>
-                                            <option value="<?php echo $id_curso; ?>">
-                                                <?php echo $nombre;?>
-                                            </option>
-                                            <?php
-                                                endwhile;
-                                            ?>
-                                    </select>
+                                    <label for="">Codigo</label>
+                                    <input id="nombres" name="nombres" type="text" class="form-control" required>
                                 </div>
                             </div>
                     </div>
@@ -118,8 +55,7 @@ include('includes/interfaz.php');
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <button id="send" class="btn btn-primary btn-lg btn-block " name="btn-crear" type="submit">Registrar
-                                        Alumno</button>
+                                    <button id="send" class="btn btn-primary btn-lg btn-block " name="btn-crear" type="submit">Agregar</button>
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="button" class="btn btn-lg btn-block btn-danger" value="Limpiar campos" onclick="Limpiar();" />

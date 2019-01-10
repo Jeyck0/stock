@@ -60,7 +60,7 @@ header('Location:../login.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../pages/index.php">Sistema de unificación y gestión plantilla PIE </a>
+                <a class="navbar-brand" href="../pages/index.php">Sistema de Control</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -97,7 +97,7 @@ header('Location:../login.php');
                         
                         
                         <li>
-                            <a href="#"><i class="fas fa-address-book"></i> Profesionales<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fas fa-address-book"></i> Personal<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <?php if($_SESSION['tipo']==1) { ?>
                                 <li>
@@ -112,7 +112,7 @@ header('Location:../login.php');
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fas fa-address-book"></i> Alumnos<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fas fa-address-book"></i> Ítems<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                         <?php if($_SESSION['tipo']==1) { ?>
 
@@ -128,7 +128,7 @@ header('Location:../login.php');
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="lista_plantillas_pie.php"><i class="fa fa-table fa-fw"></i> Plantillas Pie</a>
+                            <a href="lista_plantillas_pie.php"><i class="fa fa-table fa-fw"></i> Plantilla de Prestamos</a>
                         </li>
                         <?php if($_SESSION['tipo']==1) { ?>
 

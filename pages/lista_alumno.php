@@ -8,7 +8,7 @@ include('includes/interfaz.php');
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Lista de Alumno</h1>
+            <h1 class="page-header">Lista de Ítems</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -18,7 +18,7 @@ include('includes/interfaz.php');
                 <div class="panel-heading">
 
                     <?php if($_SESSION['tipo']==1) { ?>
-                    <a href="agregar_alumno.php" class="btn btn-sm btn-success">Nuevo alumno</a>
+                    <a href="agregar_alumno.php" class="btn btn-sm btn-success">Nuevo ítem</a>
                     <?php } ?>
 
                 </div>
@@ -26,13 +26,11 @@ include('includes/interfaz.php');
                     <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
-                                <th scope="col">N° de Matricula</th>
-                                <th scope="col">Rut</th>
-                                <th scope="col">Nombres</th>
-                                <th scope="col">Apellidos</th>
-                                <th scope="col">Curso</th>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Stock</th>
                                 <th scope="col">Opciones</th>
-
                             </tr>
                         </thead>
 
@@ -55,9 +53,7 @@ include('includes/interfaz.php');
                                 <td>
                                     <?php echo $dado['apellidos'] ?>
                                 </td>
-                                <td>
-                                    <?php echo $dado['nombre_curso'] ?>
-                                </td>
+
                                 <td>
                                     <a href="ver_alumno.php?id=<?php echo $dado['id'] ?>" class="btn btn-xs btn-info">Ver</a>
 

@@ -6,7 +6,7 @@ include('../configs/conexion_db.php');
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Agregar Profesional</h1>
+            <h1 class="page-header">Agregar Personal</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -33,61 +33,20 @@ include('../configs/conexion_db.php');
                                     <input name="rut" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Región</label>
-                                    <select class="seleccion form-control" name="cosa" onchange="cambia()">
-                                        <option value="0" selected="selected">Regiones</option>
-                                        <option value="1">Tarapaca</option>
-                                        <option value="2">Antofagasta</option>
-                                        <option value="3">Atacama</option>
-                                        <option value="4">Coquimbo</option>
-                                        <option value="5">Valparaiso</option>
-                                        <option value="6">O'Higgins</option>
-                                        <option value="7">Maule</option>
-                                        <option value="8">Bio - Bio</option>
-                                        <option value="9">Araucania</option>
-                                        <option value="10">Los Lagos</option>
-                                        <option value="11">Aisen</option>
-                                        <option value="12">Magallanes Y Antartica</option>
-                                        <option value="13">Metropolitana</option>
-                                        <option value="14">Los Rios</option>
-                                        <option value="15">Arica y Parinacota</option>
-                                    </select>
+
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Comuna</label>
-                                    <select class="seleccion form-control" name="opt">
-                                        <option value="0">Comuna</option>
-                                    </select>
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Dirección</label>
-                                    <input name="direccion" type="text" class="form-control">
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Teléfono</label>
-                                    <input name="telefono" type="number" class="form-control">
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Asignatura y/o Ámbito</label>
-                                    <select class="form-control hidden" name="asignatura" id="asignatura1">
-                                        <option value="Artes Visuales">Artes Visuales</option>
-                                        <option value="Ciencias Naturales">Ciencias Naturales</option>
-                                        <option value="Educación Física y Salud">Educación Física y Salud</option>
-                                        <option value="Historia, Geografía y Ciencias Sociales">Historia, Geografía y
-                                            Ciencias Sociales</option>
-                                        <option value="Matemática">Matemática</option>
-                                        <option value="Música">Música</option>
-                                        <option value="Orientación">Orientación</option>
-                                        <option value="Tecnología">Tecnología</option>
-                                    </select>
-                                    <select class="form-control hidden" name="asignatura" id="asignatura2">
-                                        <option value="Formación personal y social">Formación personal y social</option>
-                                        <option value="Comunicación">Comunicación</option>
-                                        <option value="Relación con el medio natural y cultural">Relación con el medio natural y cultural</option>
-                                    </select>
-                                    <select class="form-control " name="asignatura" id="asignatura3" disabled>
-                                        <option value="">Seleccione</option>
-                                    </select>
+                                    
+                                    
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -96,44 +55,23 @@ include('../configs/conexion_db.php');
                                     <input name="correo" id="email" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Fecha nacimiento</label>
-                                    <input name="fecha_nac" type="date" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Tipo de profesional</label>
-                                    <select class="form-control" name="titulo" id="titulo" required>
-                                        <option value="">Seleccione</option>
-                                        <option value="1">Educadora de parvulos</option>
-                                        <option value="2">Psicologo(A)</option>
-                                        <option value="3">Terapeuta ocupacional</option>
-                                        <option value="4">Fonoaudiologo(A)</option>
-                                        <option value="5">Profesor(A)</option>
-                                        <option value="6">Educador(A) Diferencial</option>
+                                <label for="">Área</label>
+                                    <select class="form-control" name="asignatura">
+                                        <option value="Artes Visuales">Seleccionar</option>
+                                        <option value="Artes Visuales">Contrucción</option>
+                                        <option value="Ciencias Naturales">Maquinaria</option>
+                                        <option value="Educación Física y Salud">Electricidad</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Sexo</label>
-                                    <select class="form-control" name="sexo" required>
-                                        <option value="" selected disabled hidden>Seleccione</option>
-                                        <option value="1">Masculino</option>
-                                        <option value="2">Femenino</option>
-                                    </select>
+                                <label for="">Teléfono</label>
+                                    <input name="telefono" type="number" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Jefe de curso</label>
-                                    <select class="form-control" name="jefatura" required>
-                                        <option value="" selected disabled hidden>Seleccione</option>
-                                        <option value="1">Si</option>
-                                        <option value="2">No</option>
-                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Coordinador</label>
-                                    <select class="form-control" name="coordinador" required>
-                                        <option value="" selected disabled hidden>Seleccione</option>
-                                        <option value="1">Si</option>
-                                        <option value="2">No</option>
-                                    </select>
+                                </div>
+                                <div class="form-group">
                                 </div>
                             </div>
                     </div>
@@ -142,7 +80,7 @@ include('../configs/conexion_db.php');
                             <div class="row">
                                 <div class="col-lg-6">
                                     <button class="btn btn-primary btn-lg btn-block " id="send" name="submit" type="submit">Registrar
-                                        Profesional
+                                        Personal
                                     </button></div>
                                 <div class="col-lg-6"></div>
                                 <div class="col-lg-6">
